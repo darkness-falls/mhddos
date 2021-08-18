@@ -67,7 +67,7 @@
 
 ## Downloads
 
-You can download from [GitHub Releases](https://github.com/MHProDev/MHDDoS/releases)
+You can download from [GitHub Releases](https://github.com/darkness-falls/mhddos/releases)
 
 ### Getting Started
 
@@ -95,8 +95,8 @@ You can download from [GitHub Releases](https://github.com/MHProDev/MHDDoS/relea
 **Clone and Install Script**
 
 ```console
-git clone https://github.com/MHProDev/MHDDoS.git
-cd MHDDoS
+git clone https://github.com/darkness-falls/mhddos.git
+cd mhddos
 pip3 install -r requirements.txt
 ```
 
@@ -110,7 +110,7 @@ python3 start.py bypass https://example.com 5 1000 socks5.txt 100 100
 ```
 
 [python3]: https://python.org 'Python3'
-[github]: https://github.com/MHProDev/MHDDoS/issues 'GitHub'
+[github]: https://github.com/darkness-falls/mhddos/issues 'GitHub'
 
 **💰 Donate:**
 * https://idpay.ir/mh-prodev
